@@ -1,0 +1,94 @@
+footer{
+  padding-top: 50px;
+  padding-bottom: 25px;
+  .logo{
+    align-self: flex-end;
+    margin-bottom: 25px;
+  }
+  .phone{
+    float: right;
+    clear: both;
+    display: block;
+    margin-bottom: 40px;
+    a{
+      font-weight: bold;
+      font-size: 3rem;
+      font-family: $fontOswald;
+      color: white;
+      float: right;
+    }
+  }
+  .social{
+    float: left;
+    clear: both;
+    display: block;
+    a:hover{
+      opacity: 0.8;
+    }
+    img{
+      margin-left: 15px;
+    }
+  }
+}
+.subfooter {
+    display: flex;
+    flex: 0;
+    justify-content: space-between;
+    align-items: flex-end;
+    padding: 25px 0;
+    text-align: center;
+    .phone {
+        margin-bottom: 1.5rem;
+        font-size: 1.5625rem; // 25px
+    }
+}
+// FOOTER
+.site-footer {
+    background-color: $textColor;
+    color: #fff;
+
+    .copyright {
+        font-size: 1.6rem;
+        font-style: normal;
+        font-weight: 300;
+        text-align: left;
+    }
+
+    .netgain {
+        font-family: Arial, sans-serif;
+        font-size: 1.6rem;
+        text-align: right;
+    }
+}
+
+.flex-footer {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: start;
+    padding-top: 1.5rem;
+    align-content: space-between;
+    .f-item {
+        flex: 1 0 30%;
+        padding-bottom: 1.5rem;
+        text-align: right;
+        h4{
+          margin-bottom: 1rem;
+        }
+    }
+    .phone-assoc{
+      text-align: left;
+    }
+}
+.netgain {
+    text-align: right;
+}
+.footer-contact-container {
+    text-align: center;
+    background-color: $darkGray;
+    color: #fff;
+    padding: 60px 0px;
+    h3{
+      font-size: 3rem;
+    }
+
+}

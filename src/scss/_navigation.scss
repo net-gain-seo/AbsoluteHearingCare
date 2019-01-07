@@ -1,0 +1,131 @@
+.main-nav {
+  #menu-main-menu{
+      margin-right: 10px;
+  }
+
+    ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
+    a {
+        display: block;
+        // transition: all 0.2s ease-in-out;
+    }
+    > ul {
+        margin-right: 0.5rem;
+        float: left;
+        // Top level
+        > li {
+            display: inline-block;
+            position: relative;
+            line-height: 60px;
+            margin-bottom: 0px;
+            margin-left: 0px!important;
+            margin-right: 28px;
+            transition: box-shadow 0.2s ease-in-out;
+            > a {
+                padding: 0 0rem;
+                color: black;
+                &:hover {
+                    color: $secondaryColor;
+                }
+            }
+            // Second level menu
+            .sub-menu {
+                position: absolute;
+                line-height: 1.5;
+                width: 250px;
+                background-color: $secondaryColor;
+                box-shadow: 2px 2px 20px rgba(black,0.25);
+                max-height: 0;
+                z-index: 10;
+                overflow: hidden;
+                transition: max-height 0s;
+                ul {
+                    padding-top: 30px;
+                    border-top: 3px solid $primaryColor;
+                }
+                li {
+                    display: block;
+                    margin-bottom: 0px;
+                    color: white;
+                    a {
+                        color: white;
+                        padding: 0.5rem 2.5rem 0.5rem 1rem;
+                        background-color: $secondaryColor;
+
+                        // second level menu hover/active
+                        &:hover,
+                        &.active {
+                            background-color: $primaryColor;
+                            color: #fff;
+                        }
+                    }
+                }
+                .current-menu-item a{
+                    background-color: $primaryColor;
+                    color: #fff;
+                }
+            } // end second level ul
+            // Show second level menu on hover
+            &:hover {
+                .sub-menu {
+                    z-index: 10;
+                    max-height: 1000px;
+                    transition: all 0.2s ease-in-out;
+                }
+            }
+            &:hover,
+            &.active {
+                padding: 0px 0px;
+
+            }
+            &.current-menu-item, &.current-menu-parent{
+              padding: 0px 0px;
+              color: $primaryColor;
+              a{
+                color: $primaryColor;
+              }
+            }
+        } // end top level li
+    } // end top level ul
+}
+// Get a Quote button
+.get-quote {
+    background-color: $secondaryColor;
+    color: white;
+    -webkit-transition: background-color 0.2s ease-in-out;
+    transition: background-color 0.2s ease-in-out;
+    margin-left: 10px;
+    margin-bottom: -1px;
+    width: inherit;
+    font-size: 2rem;
+    font-weight: bold;
+    width: initial;
+    padding: 15px 10px;
+    float: right;
+    order: 2;
+    flex-direction: row;
+    float: right;
+    -webkit-box-pack: end;
+    -ms-flex-pack: end;
+    justify-content: flex-end;
+    &:hover {
+        color: #fff;
+        background-color: darken($primaryColor,8%);
+    }
+    &:focus {
+        color: #fff;
+    }
+}
+.get-quote:hover {
+    background-color: $primaryColor;
+    color: white;
+    transition: background-color 0.2s ease-in-out;
+    -webkit-box-shadow: inset 0 0px 0 #2a3249;
+    box-shadow: inset 0 0px 0 #2a3249;
+    a{
+      color: white;
+    }
+}

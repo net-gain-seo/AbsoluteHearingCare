@@ -1,0 +1,175 @@
+body.sticky-header{
+  margin-top: 220px;
+}
+.site-header {
+    box-shadow: 0 3px 20px rgba(black,0.2);
+    position: relative;
+    z-index: 9999;
+}
+.flex-header {
+    height: 100%;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin: 0 auto;
+    .logo {
+        flex: 0;
+        margin-bottom: 1px;
+        img {
+          max-width: 425px;
+          padding: 25px 0px;
+        }
+    }
+    .stickylogo {
+        opacity: 0;
+        transition: opacity 0.2s ease-in-out;
+    }
+    .header-block {
+        flex: 1;
+        display: flex;
+        flex-flow: column wrap;
+        align-items: flex-end;
+        .title {
+            text-align: center;
+            padding: 0 60px 3px 16px; // adjust bottom alignment with the phone number
+        }
+        .phone {
+            a {
+              font-weight: bold;
+              font-size: 3rem;
+              font-family: $fontOswald;
+              color: #2D2A26;
+            }
+        }
+        .inner-block {
+            display: flex;
+            flex-flow: row wrap;
+            align-items: flex-end;
+            justify-content: flex-end;
+            width: 100%;
+            margin-bottom: 25px;
+            .address{
+              padding: 25px 0px;
+              padding-bottom: 0px;
+              color: #2D2A26;
+            }
+        }
+        .contact-block {
+            // display: flex;
+            // flex-flow: column wrap;
+            text-align: right;
+        }
+    }
+    .header-nav{
+      width: 100%;
+      .container{
+        width: 100%;
+      }
+    }
+
+    .mobile-icons{
+      display: none;
+    }
+}
+.stickylogo img {
+    width: 0;
+    height: 0;
+    overflow: hidden;
+    -webkit-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+}
+.sticky-header {
+    .site-header {
+        position: fixed;
+        z-index: 99989;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 60px;
+        max-height: 60px;
+        background: white;
+        box-shadow: 0 3px 20px rgba(black,0.2);
+        // transition: max-height 0.15s ease-in-out;
+    }
+    .flex-header {
+        .logo {
+            display: none;
+        }
+        .header-block {
+            .inner-block {
+                display: none;
+            }
+        }
+    }
+    .header-nav {
+        height: 60px; // IE needs this
+    }
+    .stickylogo {
+        display: none;
+        position: static;
+        left: auto;
+        opacity: 1;
+        img{
+          width: 75px;
+          position: absolute;
+          top: 5px;
+          height: auto;
+          overflow: visible;
+        }
+    }
+    .main-nav>ul>li {
+        line-height: 60px;
+    }
+    .get-quote {
+        line-height: 30px;
+    }
+}
+
+.mast {
+    position: relative;
+    overflow: hidden;
+    max-height: 350px;
+    min-height: 350px;
+    max-width: 2000px;
+    margin: auto;
+    .mast-overlay {
+      position: absolute;
+      -webkit-transform: translate(0, -50%);
+      transform: translate(0, -50%);
+      color: #fff;
+      top: 55%;
+      right: -15%;
+      left: -15%;
+      font-family: $fontAnton;
+      height: 350px;
+    }
+    h1 {
+      font-size: 4.5rem;
+      margin-bottom: 2.5rem;
+      position: absolute;
+      font-weight: normal;
+      top: -80px;
+      color: white;
+    }
+    h2,
+    p {
+        font-size: 2.6rem;
+        color: white;
+        padding-top: 25px;
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+}
+.product-mast {
+    .mast-overlay {
+        top: auto;
+        bottom: 15%;
+        transform: translate(0, 0);
+    }
+}
+.mainsubpagebackground{
+  max-width: 2000px;
+  height: 335px;
+}

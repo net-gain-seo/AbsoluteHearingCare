@@ -1,0 +1,99 @@
+.btn {
+    border-radius: 0;
+}
+
+.btn-main {
+    color: #fff;
+    background-color: $primaryColor;
+    border-color: $primaryColor;
+    &:hover {
+        color: #fff;
+        background-color: darken($primaryColor,8%);
+        border-color: darken($primaryColor,8%);
+    }
+}
+
+.btn-inverse { // white button with primaryColor text
+    color: $primaryColor;
+    background-color: #fff;
+    border-color: #fff;
+    &:hover {
+        color: $primaryColor;
+        background-color: rgba(white,0.8);
+        border-color: #fff;
+        box-shadow: 2px 2px 20px rgba(black,0.2);
+    }
+}
+
+.container {
+    padding-left: 0;
+    padding-right: 0;
+}
+.row .container {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+// Lost some card styles across the board
+.card {
+    border-radius: 0;
+    border: none;
+}
+.card-footer {
+    border-top: none;
+}
+.modal-open{
+  header, .sticky-header .site-header{
+    z-index: 11!important;
+  }
+}
+.modal {
+    top: 10%;
+    z-index: 11111;
+}
+.modal-body {
+    padding: 2.5rem 2rem;
+    textarea{
+        height: 12rem;
+    }
+}
+#popForm .modal-body div.wpcf7 form div input {
+    padding: 1.5rem 4.5rem;
+    font-size: 2.2rem;
+    border: 1px solid #eeeeee;
+}
+.modal-content {
+    border-radius: 0;
+}
+.wpcf7-not-valid-tip,
+.wpcf7-validation-errors {
+    font-size: 0.9rem !important;
+}
+.sticky-header .modal {
+    top: 70px;
+}
+.col *:last-child {
+    margin-bottom: 0;
+}
+@media screen and (max-width: 575px) {
+    .title,
+    .mast.page-mast .mast-overlay h1 {
+        font-size: 2.5rem;
+    }
+    .container {
+        padding-left: 15px !important;
+        padding-right: 15px !important;
+    }
+    .site-header {
+        .container {
+            padding-left: 0 !important;
+            padding-right: 0 !important;
+        }
+    }
+    .product-mast {
+        .mast-overlay {
+            width: 100%;
+            padding: 0 30px !important;
+        }
+    }
+}
